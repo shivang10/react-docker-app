@@ -4,7 +4,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                React Docker testing app
+                React Docker testing app!
             </header>
         </div>
     );
