@@ -5,7 +5,7 @@ function App() {
         <div className="App">
             <header className="App-header">
                 React Docker testing app!
-                testing github workflow actions
+                Testing github workflow actions
             </header>
         </div>
     );
