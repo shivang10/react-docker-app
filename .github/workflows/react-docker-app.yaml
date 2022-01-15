@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 14.x
 
-      -name: install NPM packages
-       run: npm ci
+      - name: install NPM packages
+        run: npm ci
 
-      -name: run test cases
-       run: npm test
+      - name: run test cases
+        run: npm test
