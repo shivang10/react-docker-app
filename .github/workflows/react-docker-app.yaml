@@ -21,5 +21,5 @@ jobs:
       - name: install NPM packages
         run: npm ci
 
-      - name: run test cases
+      - name: run tests cases
         run: npm test
