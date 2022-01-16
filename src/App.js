@@ -6,7 +6,7 @@ function App() {
             <header className="App-header">
                 React Docker testing app!
                 Testing github workflow actions
-                adds docker file with update
+                adds docker file with update!
             </header>
         </div>
     );
