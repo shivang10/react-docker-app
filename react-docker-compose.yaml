@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-docker-app:
+    container_name: react-docker-app
+    image: react-docker-app
+    build:
+      context: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "4001:3000"

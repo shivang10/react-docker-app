@@ -20,3 +20,6 @@ jobs:
 
       - name: run tests cases
         run: npm test
+
+      - name: build the docker image
+        run: docker-compose -f react-docker-compose.yaml up
