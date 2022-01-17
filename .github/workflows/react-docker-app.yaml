@@ -1,6 +1,10 @@
 name: react-docker-app
 
-on: [push]
+on: [ push ]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
@@ -21,5 +25,15 @@ jobs:
       - name: run tests cases
         run: npm test
 
-      - name: build the docker image
-        run: docker build -f Dockerfile -t react-docker-app .
+      - name: Log in to the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.REACT_DOCKER_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: true
